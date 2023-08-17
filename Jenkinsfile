@@ -19,11 +19,16 @@ pipeline {
         sh 'npm install'
       }
     }  
-    
+
+    stage('Lint') {
+          steps {
+            sh 'npm run  lint'
+          }
+        }
             
     stage('Test') {
       steps {
-        sh 'node test'
+        sh 'npm run test'
       }
     }
   }

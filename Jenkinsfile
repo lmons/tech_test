@@ -4,7 +4,7 @@ pipeline {
     
   tools {nodejs "node 16"}
   parameters {
-        booleanParam(name: 'executeTests', defaultValue: true, description: '', CI:true)
+        booleanParam(name: 'executeTests', defaultValue: true, description: '')
     }
     
   stages {

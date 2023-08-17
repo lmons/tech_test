@@ -4,7 +4,7 @@ pipeline {
     
   tools {nodejs "node 16"}
   environment {
-        CI = true
+        CI=true
     }
     
   stages {

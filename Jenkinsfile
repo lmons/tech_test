@@ -17,13 +17,12 @@ pipeline {
     stage('Prepare') {
       steps{
         sh "npm install -g yarn"
-        sh "yarn install"
       }
     }
      
     stage('Build') {
       steps {
-        sh 'yarn dev'
+        sh 'yarn install'
       }
     }  
 
@@ -31,7 +30,7 @@ pipeline {
             
     stage('Test') {
       steps {
-        sh 'yarn test'
+        sh 'yarn run dev'
       }
     }
   }

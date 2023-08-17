@@ -6,13 +6,7 @@ pipeline {
     
   stages {
         
-    stage('Git') {
-      steps {
-        checkout scmGit(
-    branches: [[name: 'main']],
-    userRemoteConfigs: [[url: 'https://github.com/lmons/tech_test']])
-      }
-    }
+   
     
     stage('Prepare') {
       steps{
@@ -26,7 +20,7 @@ pipeline {
             
     stage('Test') {
       steps {
-        sh 'yarn run dev'
+        sh 'yarn test'
       }
     }
   }

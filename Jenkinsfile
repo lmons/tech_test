@@ -13,6 +13,10 @@ pipeline {
     userRemoteConfigs: [[url: 'https://github.com/lmons/tech_test']])
       }
     }
+    stage('Prepare') {
+    sh "npm install -g yarn"
+    sh "yarn install"
+}
      
     stage('Build') {
       steps {

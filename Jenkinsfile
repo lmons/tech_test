@@ -8,7 +8,7 @@ pipeline {
         
     stage('Git') {
       steps {
-        git 'https://github.com/lmons/tech_test'
+        git clone 'https://github.com/lmons/tech_test'
       }
     }
      

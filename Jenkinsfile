@@ -8,7 +8,9 @@ pipeline {
         
     stage('Git') {
       steps {
-        git clone 'https://github.com/lmons/tech_test'
+        checkout scmGit(
+    branches: [[name: 'main']],
+    userRemoteConfigs: [[url: 'https://github.com/lmons/tech_test']])
       }
     }
      
